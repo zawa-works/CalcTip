@@ -4,8 +4,8 @@ function calcTip(magnification){
     let calculatedPrice = originalPrice * magnification
     calculatedPrice = round_down(calculatedPrice,3)
     let tip = calculatedPrice - originalPrice
-    document.getElementById("tip_price").innerText = "tip: " + tip
-    document.getElementById("calculated_price").innerText = "sum: " + calculatedPrice
+    document.getElementById("tip_price").innerText = tip
+    document.getElementById("calculated_price").innerText = calculatedPrice
   }
 
 function round_down(price,decimalPlace){

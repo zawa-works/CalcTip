@@ -9,6 +9,13 @@
   
   /*-- スマホ版表示CSS  --*/
   @media screen and (max-width: 600px){
+    .pc_area{
+      display:none;
+    }
+    .phone_area{
+      display:block;
+    }
+
     body {
       background-image: url("./images/background.jpg");
       background-repeat: no-repeat;
@@ -21,13 +28,17 @@
       font-family: "Comic Sans MS";
       color: #fff;
     }
-    .pc_area{
-      display:none;
+    #calc_screen{
+      background-color:#000;
     }
-    .phone_area{
-      display:block;
+    div.prices {
+      float: left;
+      width: 50%;
+       
     }
-
+    .buttons{
+      clear:both;
+    }
     input {
         font-size: 300%;
         }
