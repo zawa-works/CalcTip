@@ -1,0 +1,34 @@
+/*-- PC版表示CSS  --*/
+.pc_area{
+    display:block;
+  }
+.phone_area{
+    display:none;
+  }
+  
+  
+  /*-- スマホ版表示CSS  --*/
+  @media screen and (max-width: 600px){
+    body {
+      background-image: url("./images/background.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size:cover;
+      background-position: center top
+      }
+    p{
+      font-size: 300%;
+      font-family: "Comic Sans MS";
+      color: #fff;
+    }
+    .pc_area{
+      display:none;
+    }
+    .phone_area{
+      display:block;
+    }
+
+    input {
+        font-size: 300%;
+        }
+  }
