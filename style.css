@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /*-- PC版表示CSS  --*/
 .pc_area{
     display:block;
@@ -14,32 +19,52 @@
     }
     .phone_area{
       display:block;
+      width: 90vw;
     }
 
     body {
+      width: 100vw;
       background-image: url("./images/background.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size:cover;
-      background-position: center top
+      background-position: center top;
+      display: flex;
+      justify-content: center;
+      margin-top: 15vh;
       }
-    p{
-      font-size: 300%;
-      font-family: "Comic Sans MS";
-      color: #fff;
-    }
     #calc_screen{
-      background-color:#000;
+      display: flex;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.6);
     }
     div.prices {
-      float: left;
-      width: 50%;
-       
+      width: 40%;
+    }
+    .text {
+      font-size: 250%;
+      font-family: "Comic Sans MS";
+      color: #fff;
+      line-height: 1.8;
     }
     .buttons{
-      clear:both;
+      width: 90vw;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15vh;
     }
-    input {
-        font-size: 300%;
-        }
+    input[type="button"] {
+      font-size: 400%;
+    }
+    #original_price {
+      font-size: 250%;
+      width: 36vw;
+      text-align: right;
+      background: transparent;
+      border: none;
+    }
+    .prices {
+      text-align: right;
+      margin-right: 10vw;
+    }
   }

@@ -12,24 +12,25 @@
     <div>
         <p class="pc_area">スマートフォンの縦向きのみ対応しています</p>
     </div>
-    <div align="center" class="phone_area">
-        <div align="center" id="calc_screen">
+    <div class="phone_area">
+        <div id="calc_screen">
             <div class="prices">
-                <p align="right">price:</p>
-                <p align="right">tip:</p>
-                <p align="right">sum:</p>
+                <p class="text">price:</p>
+                <p class="text">tip:</p>
+                <p class="text">sum:</p>
             </div>
             <div class="prices">
-                <p align="right" id="original_price">420</p>
-                <p align="right" id="tip_price">0</p>
-                <p align="right" id="calculated_price"></p>
+                <input type="number" name="number"  value="420" class="text" id="original_price">
+                <p class="text" id="tip_price">0</p>
+                <p class="text" id="calculated_price"></p>
             </div>
         </div>
-        <div align="center" class="buttons">
+        <div class="buttons">
             <input type="button" value="🤩" onclick="calcTip(1.2);">
             <input type="button" value="😆" onclick="calcTip(1.15);">
             <input type="button" value="🙂" onclick="calcTip(1.10);">
-            <input type="button" value="🤮" onclick="calcTip(1.05);">
+            <input type="button" value="😰" onclick="calcTip(1.05);">
+            <input type="button" value="🤮" onclick="calcTip(1);">
         </div>
     </div>
     
