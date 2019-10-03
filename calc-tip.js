@@ -1,39 +1,24 @@
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+let tip = 0
+let total = 0
+
+const lerp = (start, stop, amt) => stop == 1 ? stop:start + (stop - start) * amt
+const format = value => Number.isInteger(value) ? value.toFixed(0) : value.toFixed(2)
 const countUp = async () => {
-  let countMax = 30
-  for (let i = 0; i < countMax; i++) {
-    setPrice(tip, i, countMax,"tip_price")
-    setPrice(calculatedPrice, i, countMax, "calculated_price")
+  const COUNT_MAX = 30
+  for (let i = 0; i <= COUNT_MAX; i++) {
+    document.getElementById('tip').innerText = format(lerp(0, tip, i / COUNT_MAX))
+    document.getElementById('total').innerText = format(lerp(0, total, i / COUNT_MAX))
     await sleep(10)
   }
-
-  document.getElementById("tip_price").innerText = tip
-  document.getElementById("calculated_price").innerText = calculatedPrice
 }
 
-let tip = 0
-let calculatedPrice = 0
-
-function calcTip(magnification) {
-  let originalPrice = document.getElementById("original_price").value
-  originalPrice = parseFloat(originalPrice)
-  calculatedPrice = originalPrice * magnification
-  calculatedPrice = round_down(calculatedPrice, 3)
-  tip = calculatedPrice - originalPrice
-  tip = round_down(tip, 3)
+function tipRate(magnification) {
+  let price = document.getElementById("price").value
+  price = parseFloat(price)
+  total = price * magnification
+  tip = total - price
   countUp()
-
-}
-
-function round_down(price, decimalPlace) {
-  let num = Math.pow(10, decimalPlace - 1)
-  return Math.round(price * num) / num
-}
-
-function setPrice(price, count, countMax, id) {
-  let num = count * price / countMax
-  if (Number.isInteger(price)) document.getElementById(id).innerText = num.toFixed(0)
-  else document.getElementById(id).innerText = num.toFixed(2)
 }
 
 
