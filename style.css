@@ -49,6 +49,12 @@
       line-height: 1.8;
     }
     .buttons{
+      font-family: "Segoe UI Emoji",
+      "Segoe UI Symbol",
+      "Apple Color Emoji",
+      "Noto Color Emoji",
+      "Noto Emoji",
+      sans-serif;
       width: 90vw;
       display: flex;
       justify-content: space-around;
