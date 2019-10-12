@@ -21,9 +21,10 @@
       display:block;
       width: 90vw;
     }
-    html{
+    body{
       width: 100vw;
-      background-image: url("./images/background.jpg");
+      height: 100vh;
+      background-image: url("images/background_2.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size:cover;
@@ -32,6 +33,7 @@
       justify-content: center;
       margin-top: 15vh;
       overscroll-behavior: none;
+      overflow:hidden;
       }
     #calc_screen{
       display: flex;
