@@ -23,7 +23,7 @@
     }
     body{
       width: 100vw;
-      height: 100vh;
+      height: 100%;
       background-image: url("images/background_4.jpg");
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -33,7 +33,6 @@
       justify-content: center;
       margin-top: 15vh;
       overscroll-behavior: none;
-      overflow:hidden;
       }
     #calc_screen{
       display: flex;
