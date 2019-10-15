@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>EmoTip</title>
     <link rel="stylesheet" type="text/css" href="./style.css">
@@ -27,15 +27,11 @@
             </div>
         </div>
         <div class="buttons">
-            <input type="image" src="images/grinning-face-with-star-eyes.png" alt="very satisfied" onclick="tipRate(1.20);">
-            <input type="image" src="images/smiling-face-with-open-mouth-and-smiling-eyes.png" alt="satisfied" onclick="tipRate(1.15);">
-            <input type="image" src="images/slightly-smiling-face.png" alt="neither" onclick="tipRate(1.10);">
-            <input type="image" src="images/face-with-open-mouth-and-cold-sweat.png" alt="dissatisfied" onclick="tipRate(1.05);">
-            <input type="image" src="images/face-screaming-in-fear.png" alt="very dissatisfied" onclick="tipRate(1.00);">
-            <!-- <input type="button" value="😆" onclick="tipRate(1.15);">
-            <input type="button" value="🙂" onclick="tipRate(1.10);">
-            <input type="button" value="😰" onclick="tipRate(1.05);">
-            <input type="button" value="🤮" onclick="tipRate(1);"> -->
+            <input id="very_satisfied" type="image" src="images/grinning-face-with-star-eyes.png" onclick="tipRate(1.20);drawSelectedBorder(this);">
+            <input id="satisfied" type="image" src="images/smiling-face-with-open-mouth-and-smiling-eyes.png" onclick="tipRate(1.15);drawSelectedBorder(this);">
+            <input id="neither" type="image" src="images/slightly-smiling-face.png" onclick="tipRate(1.10);drawSelectedBorder(this);">
+            <input id="dissatisfied" type="image" src="images/face-with-open-mouth-and-cold-sweat.png" onclick="tipRate(1.05);drawSelectedBorder(this);">
+            <input id="very_dissatisfied" type="image" src="images/face-screaming-in-fear.png" onclick="tipRate(1.00);drawSelectedBorder(this);">
         </div>
     </div>
     
