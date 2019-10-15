@@ -14,7 +14,7 @@ const countUp = async () => {
 }
 
 function tipRate(magnification) {
-  let price = document.getElementById("price").value
+  let price = document.getElementById('bill').value
   price = parseFloat(price)
   total = price * magnification
   tip = total - price
